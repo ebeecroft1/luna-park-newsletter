@@ -7,7 +7,7 @@ global.User = require('./api/models/userModels');
 const routes = require('./api/routes/userRoutes');
 
 mongoose.Promise = global.Promise;
-mongoose.connect(`mongodb+srv://lunapark:${ process.env.MONGOPW }@cluster0.inlga3s.mongodb.net/?retryWrites=true&w=majority`)
+mongoose.connect(`mongodb+srv://lunapark:${ process.env.MONGODB_URI }@cluster0.inlga3s.mongodb.net/?retryWrites=true&w=majority`)
 
 const port = process.env.PORT || 3000; // this is so Heroku can assign a PORT to you
 const app = express();
