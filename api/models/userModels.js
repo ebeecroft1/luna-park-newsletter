@@ -37,6 +37,7 @@ const UserSchema = new Schema(
         },
         interests: {
             type: Array,
+            validate: [(val) => val.length > 0, 'Must have minimum one option'],
             minItems: 1,
             description: 'hello world',
             required: 'Please select one or more options if you want to proceed'
