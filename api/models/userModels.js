@@ -37,7 +37,8 @@ const UserSchema = new Schema(
         },
         interests: {
             type: Array,
-            minItems: [1,'Please select one or more options if you want to proceed'],
+            minItems: 1,
+            description: 'hello world',
             required: 'Please select one or more options if you want to proceed'
         },
         frequency: {
