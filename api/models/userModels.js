@@ -36,13 +36,12 @@ const UserSchema = new Schema(
             match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
         },
         interests: {
-            deals: { type: Boolean },
-            events: { type: Boolean },
-            update: { type: Boolean },
-            promos: { type: Boolean }
+            type: Array,
+            required: 'Please select one or more options if you want to proceed'
         },
         frequency: {
-            type: String
+            type: String,
+            required: 'Please select one option if you want to proceed'
         }
     },
     {timestamps: true},

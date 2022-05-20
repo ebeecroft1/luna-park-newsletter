@@ -4,7 +4,10 @@ const User = mongoose.model('User');
 exports.createUser = (req, res) => {
     const newUser = new User(req.body);
     newUser.save((err, user) => {
-        if (err) res.send(err);
+        if (err) {
+            res.send(err);
+            console.log(err);
+        };
         res.json(user);
     });
 };
